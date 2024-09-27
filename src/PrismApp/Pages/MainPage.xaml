@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    Title="Prism App (Repro)"
+    x:Class="PrismApp.Pages.MainPage"
+    x:DataType="viewmodels:MainViewModel"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:viewmodels="clr-namespace:PrismApp.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <VerticalStackLayout
+        Padding="20,0"
+        Spacing="20"
+        VerticalOptions="Center">
+        <Label Text="This prism app has an issue with the navigation page applying an 8px padding on iOS 18 when displaying a modal..." />
+
+        <Button Command="{Binding ShowModalCommand}" Text="Show Modal" />
+    </VerticalStackLayout>
+</ContentPage>

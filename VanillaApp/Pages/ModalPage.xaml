@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    NavigationPage.HasNavigationBar="False"
+    Title="Page Title"
+    x:Class="VanillaApp.Pages.ModalPage"
+    x:DataType="viewmodels:ModalViewModel"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewmodels="clr-namespace:VanillaApp.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="Yellow" />
+    </ContentPage.Behaviors>
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <!--  If we add a -8 padding this displays as expected  -->
+            <!-- <On Platform="iOS" Value="-8" /> -->
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid RowDefinitions="Auto, *">
+        <ContentView BackgroundColor="DarkGreen" Padding="20">
+            <Label Text="This view should be at the very top of the page!" />
+        </ContentView>
+
+        <Image Grid.Row="1" Source="https://i1.sndcdn.com/artworks-MLVPZP0nKTUrxGKa-tLoC3g-t1080x1080.jpg" />
+    </Grid>
+</ContentPage>

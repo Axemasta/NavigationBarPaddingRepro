@@ -1,0 +1,20 @@
+<Project>
+
+	<PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.csproj'">
+		<LangVersion>preview</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<MauiVersion>8.0.91</MauiVersion>
+		
+		<IosTargetFramework>net8.0-ios</IosTargetFramework>
+
+		<MauiPlatformTargetFrameworks>$(IosTargetFramework);</MauiPlatformTargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup Condition=" $(UseMaui) == 'true' ">
+		<PackageVersion Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)"/>
+		<PackageVersion Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
+	</ItemGroup>
+
+</Project>
