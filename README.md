@@ -1,6 +1,8 @@
 # Navigation Bar Padding iOS Repro
 
-Reproduction of content page padding issue on iOS when using PrismNavigationPage. When displaying a modal page with a navigation page, the content of the root page gets pushed slightly down the page, a top padding of -8px will workaround the issue.
+[![Issue Status](https://img.shields.io/github/issues/detail/state/dotnet/maui/24972)](https://github.com/dotnet/maui/issues/24972)
+
+Reproduction of content page padding issue on iOS when using NavigationPage. When displaying a modal page with a navigation page, the content of the root page gets pushed slightly down the page, a top padding of -8px will workaround the issue.
 
 ## How To Run
 
